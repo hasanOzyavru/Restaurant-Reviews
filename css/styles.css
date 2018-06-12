@@ -273,3 +273,13 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+/* The view is fixed and auto-margined */
+
+@media screen and (min-width: 1024px) {
+	
+  body {
+      width: 1024px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  }
