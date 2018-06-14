@@ -54,6 +54,7 @@ nav {
   height: 80px;
   background-color: #252831;
   text-align:center;
+  vertical-align: middle;
 }
 nav h1 {
   margin: auto;
@@ -64,6 +65,7 @@ nav h1 a {
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
+  line-height: 80px;
 }
 #breadcrumb {
     padding: 10px 40px 16px;
@@ -191,11 +193,13 @@ nav h1 a {
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 87%;
-  position: fixed;
-  right: 0;
-  top: 80px;
-  width: 50%;
+  /* height: 87%;*/
+  height: 500px;
+  position: relative; /* fixed */
+  /*right: 0; */
+  /*top: 80px; */
+  margin-top: 80px;
+  width: 100%;
 }
 .inside #map {
   background-color: #ccc;
@@ -239,8 +243,8 @@ nav h1 a {
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
-  width: 50%;
+  padding: 140px 40px 30px; 
+  width: 100%;
 }
 #reviews-container {
   padding: 30px 40px 80px;
@@ -273,6 +277,42 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+
+/* The view for mobile */
+
+@media screen and (max-width: 560px) {
+
+  nav h1 a {
+    color: #fff;
+    font-size: 10pt;/* 10pt; */
+    font-weight: 200;
+    letter-spacing: 10px;
+  }
+  #breadcrumb {
+   width: 100%;
+  }
+
+  #restaurant-container, #reviews-container {
+    padding: 0; 
+    width: 100%;
+  }
+  #reviews-container {
+    padding: 0;
+  }
+
+  .inside #footer {
+    
+    position: relative;
+    width: 100%;
+  }
+
+  #footer {
+    
+    padding: 25px 0;
+  }
+
+  }
+
 /* The view is fixed and auto-margined */
 
 @media screen and (min-width: 1024px) {
