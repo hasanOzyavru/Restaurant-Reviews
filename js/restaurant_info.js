@@ -175,3 +175,13 @@ getParameterByName = (name, url) => {
     return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
+
+mapsFrameTitle = () => {
+  document.querySelector('iframe').title = 'Map of Restaurants';
+}
+
+/* Set iFrame title when loaded
+*/
+window.addEventListener('load', (event) => {
+  mapsFrameTitle();
+});

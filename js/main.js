@@ -182,3 +182,13 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 }
+
+mapsFrameTitle = () => {
+  document.querySelector('iframe').title = 'Map of Restaurants';
+}
+
+/* Set iFrame title when loaded
+*/
+window.addEventListener('load', (event) => {
+  mapsFrameTitle();
+});
