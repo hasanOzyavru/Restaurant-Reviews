@@ -195,7 +195,7 @@ nav h1 a {
   background: blue none repeat scroll 0 0;
   /* height: 87%;*/
   height: 500px;
-  position: relative; /* fixed */
+  position: relative; /* before fixed */
   /*right: 0; */
   /*top: 80px; */
   margin-top: 80px;
@@ -209,7 +209,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 100%;
 }
 #restaurant-name {
   color: #f18200;
@@ -254,7 +254,7 @@ nav h1 a {
   font-size: 24pt;
   font-weight: 300;
   letter-spacing: -1px;
-  padding-bottom: 1pt;
+  padding-left: 10px;
 }
 #reviews-list {
   margin: 0;
@@ -262,7 +262,7 @@ nav h1 a {
 }
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
@@ -270,6 +270,8 @@ nav h1 a {
   padding: 0 20px 20px;
   position: relative;
   width: 85%;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 #reviews-list li p {
   margin: 0 0 10px;
@@ -278,18 +280,47 @@ nav h1 a {
   color: #666;
 }
 
+.review-name-date {
+  background-color: #000;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.review-name {
+  float: left;
+  color: white;
+}
+
+.review-date {
+  float: right;
+  color: gray;
+  padding-right: 10px;
+}
+
+.review-rating {
+  background-color: orange;
+  color: white;
+  padding: 3px 15px;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+
 /* The view for mobile */
 
 @media screen and (max-width: 560px) {
 
   nav h1 a {
     color: #fff;
-    font-size: 10pt;/* 10pt; */
+    font-size: 10pt;
     font-weight: 200;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
   }
   #breadcrumb {
    width: 100%;
+   padding: 10px 10px 16px;
   }
 
   #restaurant-container, #reviews-container {
@@ -306,9 +337,23 @@ nav h1 a {
     width: 100%;
   }
 
-  #footer {
-    
+  #footer { 
     padding: 25px 0;
+  }
+
+  #restaurant-name {
+    font-size: 16pt;
+    margin: 25px 0 25px 10px;
+  }
+
+  #reviews-list li {
+    margin: 0 4% 30px 4%; /* center by margin 4% since width is 92% */
+    padding: 0 0px 20px 0px;
+    width: 92%;
+  }
+
+  #reviews-list li p {
+    margin: 0 0 10px 10px;
   }
 
   }
