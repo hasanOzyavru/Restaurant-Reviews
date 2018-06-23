@@ -21,16 +21,17 @@ var filesToCache = [
 ];
 
 var cacheName = 'cache-v1';
-/*
+
 self.addEventListener('install', function(event) {
-  console.log('Attempting to install service worker and cache static assets');
+  console.log('SW installed');
   event.waitUntil(
-    caches.open(staticCacheName)
+    caches.open(cacheName)
     .then(function(cache) {
-      return cache.addAll(filesToCache);
+        console.log('SW caching cache files');
+        return cache.addAll(filesToCache);
     })
   );
 });
 
-*/
+
   
