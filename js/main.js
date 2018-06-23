@@ -198,3 +198,15 @@ window.addEventListener('load', (event) => {
   mapsFrameTitle();
 });
 
+/* Register the service worker
+*/
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/js/sw.js',{scope:'/js/'})
+        .then(function(registration){
+          console.log("SW registered", registration)
+        })
+        .catch(function(err) {
+          console.log("SW failed to register", err);
+        })
+}
+
