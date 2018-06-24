@@ -23,12 +23,12 @@
     <section>
       <div class="filter-options">
         <h2>Filter Results</h2>
-        <label for="neighborhoods-select">select neighborhoods
+        <label for="neighborhoods-select">
         <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all" >All Neighborhoods</option>
         </select>
         </label>
-        <label for="cuisines-select">select cuisines
+        <label for="cuisines-select">
         <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
           <option value="all" >All Cuisines</option>
         </select>
@@ -40,6 +40,7 @@
 
   <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
   <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
+  <script type="application/javascript" charset="utf-8" src="js/sw_register.js"></script>
   <script type="application/javascript" charset="utf-8" src="/sw.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLNRWcshFoocxicZ3JYqsYeFTA-VRxGCQ&libraries=places&callback=initMap"></script>
 

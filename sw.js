@@ -55,7 +55,7 @@ self.addEventListener('fetch',function(event){
                 console.log('SW found in cache', event.request.url);
                 return response;
             }
-            var requestClone = e.request.clone();
+            var requestClone = event.request.clone();
             fetch(requestClone).then(function(response){
                 if (!response) {
                     console.log('SW no response');
